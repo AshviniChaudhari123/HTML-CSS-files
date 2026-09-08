@@ -15,7 +15,7 @@ body {
     padding: 20px;
 }
 
-/* मोबाइल स्क्रीन कंटेनर */
+/* mobile screen container */
 .phone-container {
     width: 360px;
     height: 740px;
@@ -24,16 +24,16 @@ body {
     overflow-y: auto;
     position: relative;
     padding: 20px;
-    padding-bottom: 80px; /* नेविगेशन बार के लिए जगह */
+    padding-bottom: 80px; /* from navigation bar */
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* स्क्रोलबार छुपाने के लिए */
+/* to hide the scrollbar*/
 .phone-container::-webkit-scrollbar {
     display: none;
 }
 
-/* हेडर स्टाइल */
+/*header*/
 .header {
     display: flex;
     justify-content: space-between;
@@ -52,7 +52,7 @@ body {
     cursor: pointer;
 }
 
-/* क्विक ग्रिड (6 आइटम्स वाला सेक्शन) */
+/* grid 6items section */
 .quick-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -91,7 +91,7 @@ body {
     flex-shrink: 0;
 }
 
-/* प्लेसहोल्डर कलर्स */
+/* placeholders section */
 .green { background: #1db954; }
 .orange { background: #e67e22; }
 .yellow { background: #f1c40f; }
@@ -99,7 +99,7 @@ body {
 .pink { background: #e91e63; }
 .purple { background: #9b59b6; }
 
-/* सेक्शन्स और स्क्रॉलिंग */
+/* section and scroling */
 .section-container {
     margin-bottom: 25px;
 }
@@ -120,7 +120,7 @@ body {
     display: none;
 }
 
-/* कार्ड्स डिज़ाइन */
+/* cards design */
 .card {
     min-width: 130px;
     width: 130px;
@@ -170,7 +170,7 @@ body {
     line-height: 1.3;
 }
 
-/* पॉपुलर प्लेलिस्ट कार्ड्स */
+/* popular playlist cards */
 .playlist-card {
     min-width: 140px;
     height: 90px;
@@ -185,7 +185,7 @@ body {
 .feelin-good { background: linear-gradient(to bottom right, #f39c12, #d35400); }
 .pumped-pop { background: linear-gradient(to bottom right, #2c3e50, #3498db); }
 
-/* बॉटम नेविगेशन बार */
+/* bottom navigation bar */
 .bottom-nav {
     position: absolute;
     bottom: 0;
