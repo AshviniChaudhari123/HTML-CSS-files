@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Assignment</title>
+    <style>
+        /* Basic styling for the entire page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+         /* form container styling*/
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            background: #ffffff;
+            padding: 10px;
+            border: 2px solid #767676
+        }
+
+         /*Register*/
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        /* Instruction text*/
+        .instruction {
+            font-size: 16px;
+            margin-bottom: 25px;
+            color: #000000;
+        }
+
+        /* Input group(label and Input Box) */
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        /* Labels above input fields */
+        label {
+            display: block;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #000000;
+        }
+
+        /* text input box styling */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #767676;
+            border-radius: 2px;
+            box-sizing: border-box; /*so that padding doesn't increase the width */
+        }
+
+        /* register button styling */
+        .register-btn {
+            width: 100%;
+            padding: 6px;
+            background-color: #f0f0f0;
+            border: 1px solid #767676;
+            border-radius: 2px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .register-btn:hover {
+            background-color: #e5e5e5;
+        }
+
+        /* bottom login text */
+        .login-text {
+            text-align: center;
+            font-size: 16px;
+            color: #000000;
+        }
+
+        /* login link (blue line) */
+        .login-text a {
+            color: #0000ee;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Register</h1>
+        <p class="instruction">Kindly fill in this form to register.</p>
+
+        <form>
+            <!-- Username field -->
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter username" required>
+            </div>
+
+            <!-- Email field -->
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter Email" required>
+            </div>
+
+            <!-- Password field -->
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter Password" required>
+            </div>
+
+            <!-- Repeat Password field -->
+            <div class="input-group">
+                <label for="repeat-password">Repeat Password</label>
+                <input type="password" id="repeat-password" placeholder="Repeat Password" required>
+            </div>
+
+            <!-- Register Button -->
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+
+        <!-- Login link -->
+        <p class="login-text">Already have an account? <a href="#">Log in</a></p>
+    </div>
+
+</body>
+</html>

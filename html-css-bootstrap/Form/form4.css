@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main form container */
+.registration-container {
+    background-color: #e2e2e2;
+    width: 340px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ccc;
+}
+
+.registration-container h2 {
+    border-bottom:3px solid#555050;
+    padding-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+
+/* input field styling */
+.input-container {
+    display: flex;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #b3b3b3;
+}
+
+.icon-box {
+    background-color: #1a365d; /* dark blue colour */
+    color: white;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.input-container input {
+    flex: 1;
+    padding: 10px 12px;
+    border: none;
+    outline: none;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    color: #333;
+}
+
+/* radio button design */
+.radio-group-inline {
+    border-bottom: 1px solid#464343;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    display:flex;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-bottom: 18px;
+    padding-left: 5px;
+}
+
+.gender-section {
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    user-select: none;
+}
+
+/* hide original radio button */
+.radio-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* checkbox/radio look */
+.custom-radio {
+    height: 14px;
+    width: 14px;
+    background-color: #fff;
+    border: 1px solid #1a365d;
+    border-radius: 50%;
+    margin-right: 8px;
+    display: inline-block;
+    position: relative;
+}
+
+/* dark blue colour and checkmark when selected */
+.radio-label input:checked ~ .custom-radio {
+    background-color: #1a365d;
+}
+
+.radio-label input:checked ~ .custom-radio::after {
+    content: "✓";
+    position: absolute;
+    color: white;
+    font-size: 9px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* footer and button section */
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.terms-text {
+    font-size: 11px;
+    color: #666;
+    line-height: 1.3;
+    max-width: 60%;
+}
+
+.terms-text a {
+    color: #1a365d;
+    text-decoration: underline;
+}
+
+.register-btn {
+    background-color: #2b579a;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.register-btn:hover {
+    background-color: #1a365d;
+}

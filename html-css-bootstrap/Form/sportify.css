@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* मोबाइल स्क्रीन कंटेनर */
+.phone-container {
+    width: 360px;
+    height: 740px;
+    background-color: #121212;
+    border-radius: 30px;
+    overflow-y: auto;
+    position: relative;
+    padding: 20px;
+    padding-bottom: 80px; /* नेविगेशन बार के लिए जगह */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* स्क्रोलबार छुपाने के लिए */
+.phone-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* हेडर स्टाइल */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.header-icons i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* क्विक ग्रिड (6 आइटम्स वाला सेक्शन) */
+.quick-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.grid-item {
+    background-color: #282828;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.grid-item:hover {
+    background-color: #3e3e3e;
+}
+
+.grid-item span {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.img-placeholder {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 10px;
+    flex-shrink: 0;
+}
+
+/* प्लेसहोल्डर कलर्स */
+.green { background: #1db954; }
+.orange { background: #e67e22; }
+.yellow { background: #f1c40f; }
+.blue { background: #3498db; }
+.pink { background: #e91e63; }
+.purple { background: #9b59b6; }
+
+/* सेक्शन्स और स्क्रॉलिंग */
+.section-container {
+    margin-bottom: 25px;
+}
+
+.section-container h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.horizontal-scroll {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* कार्ड्स डिज़ाइन */
+.card {
+    min-width: 130px;
+    width: 130px;
+}
+
+.card-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.repeat-gradient {
+    background: linear-gradient(135deg, #450af5, #c411a1);
+}
+
+.discover-gradient {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.infinite-icon {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.discover-text {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.card h4 {
+    font-size: 13px;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card p {
+    font-size: 11px;
+    color: #b3b3b3;
+    line-height: 1.3;
+}
+
+/* पॉपुलर प्लेलिस्ट कार्ड्स */
+.playlist-card {
+    min-width: 140px;
+    height: 90px;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    align-items: flex-end;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.feelin-good { background: linear-gradient(to bottom right, #f39c12, #d35400); }
+.pumped-pop { background: linear-gradient(to bottom right, #2c3e50, #3498db); }
+
+/* बॉटम नेविगेशन बार */
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to top, #000000, #121212);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}

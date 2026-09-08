@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.form-container {
+    background: linear-gradient(to bottom, #dcd6f7, #f4f4f9 150px);
+    width: 100%;
+    max-width: 650px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #33334d;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555577;
+    font-size: 14px;
+}
+
+.required {
+    color: red;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+input::placeholder {
+    color: #bbb;
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+.col {
+    flex: 1;
+}
+
+.captcha-placeholder {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #d3d3d3;
+    background-color: #f9f9f9;
+    padding: 15px;
+    width: fit-content;
+    border-radius: 3px;
+}
+
+.captcha-placeholder label {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.submit-btn::before {
+    content: "▶️";
+    font-size: 12px;
+}
+
+.submit-btn:hover {
+    background-color: #004085;
+}
