@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #dcdcd0; /* Image ke background jaisa soft color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Outer Container / Canvas */
+.gallery {
+    display: grid;
+    /* 3 equal columns aur 3 rows */
+    grid-template-columns: repeat(3, 160px);
+    grid-template-rows: repeat(3, 160px);
+    gap: 20px;
+    padding: 35px;
+    background-color: #eeeede;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+/* Common Item Styling */
+.grid-item {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Main Featured Image Overlay Technique */
+.item-featured {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 220px;
+    z-index: 10; /* Baki images ke upar overlap karne ke liye */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+    border: 3px solid #fff;
+}

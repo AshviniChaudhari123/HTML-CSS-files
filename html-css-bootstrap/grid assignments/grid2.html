@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ena">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aGrid Gallery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Grid Container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            /* 3 Columns */
+            grid-auto-rows: 200px;
+            /* Base row height */
+            gap: 15px;
+            /* Cards ke beech ka gap */
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        /* Common Card Styling */
+        .card {
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Subtle Overlay taaki text ache se dikhe */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+            z-index: 1;
+        }
+
+        .card h3,
+        .card .read-post {
+            position: relative;
+            z-index: 2;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .card .read-post {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            align-self: flex-end;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        /* Layout Positioning (Grid Spanning) */
+
+        /* Top Row */
+        .card-1 {
+            grid-column: span 1;
+            background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=600');
+            /* Dark Blue/Glow */
+        }
+
+        .card-2 {
+            grid-column: span 2;
+            background-image: url('https://images.unsplash.com/photo-1477959858617-67f30ac7261e?q=80&w=800');
+            /* Sunset City Skyline */
+        }
+
+        /* Middle Row */
+        .card-3 {
+            grid-column: span 2;
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800');
+            /* Ocean Waves */
+        }
+
+        .card-4 {
+            grid-column: span 1;
+            grid-row: span 2;
+            /* Vertical tall image */
+            background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600');
+            /* Pink Building Facade */
+        }
+
+        /* Bottom Row */
+        .card-5 {
+            grid-column: span 1;
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=600');
+            /* Warm Tone */
+        }
+
+        .card-6 {
+            grid-column: span 1;
+            background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600');
+            /* Dark Water/Abstract */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <!-- Card 1 -->
+        <div class="card card-1">
+            <h3>The winter of my discontent</h3>
+            <span class="read-post">READ POST</span>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card card-2">
+            <h3>Instagram is toxic but I keep posting</h3>
+            <span class="read-post">READ POST</span>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card card-3">
+            <h3>Throwing my phone into the ocean</h3>
+            <span class="read-post">READ POST</span>
+        </div>
+
+        <!-- Card 4 (Tall Vertical Card) -->
+        <div class="card card-4">
+            <h3>I'm never leaving my room</h3>
+            <span class="read-post">READ POST</span>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card card-5">
+            <h3>Staring at the horizon thinking</h3>
+            <span class="read-post">READ POST</span>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card card-6">
+            <h3>This is water</h3>
+            <span class="read-post">READ POST</span>
+        </div>
+    </div>
+
+</body>
+
+</html>

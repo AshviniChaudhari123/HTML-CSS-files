@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Sabse bahar waala dark thick border */
+.outer-border {
+    border: 4px solid #1a1a1a;
+    padding: 10px;
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 700px;
+}
+
+/* CSS Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Left, Middle (Main), Right */
+    grid-template-rows: auto auto 1fr auto; /* Header, Nav, Content Area, Footer */
+    gap: 10px;
+    padding: 8px;
+    border: 1.5px solid #333; /* Inner container border */
+}
+
+/* Common Styles for Boxes */
+.header, .nav, .left-content, .main-content, .right-content, .footer {
+    border: 1.5px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #13ac58;
+    background-color: #f9f9f9;
+}
+
+/* Grid Area Positions */
+.header {
+    grid-column: 1 / -1; /* Pura span karega */
+    padding: 15px 0;
+}
+
+.nav {
+    grid-column: 1 / -1; /* Pura span karega */
+    padding: 12px 0;
+}
+
+.left-content {
+    grid-column: 1 / 2;
+    min-height: 250px;
+}
+
+.main-content {
+    grid-column: 2 / 3;
+    min-height: 250px;
+}
+
+.right-content {
+    grid-column: 3 / 4;
+    min-height: 250px;
+}
+
+.footer {
+    grid-column: 1 / -1; /* Pura span karega */
+    padding: 12px 0;
+}

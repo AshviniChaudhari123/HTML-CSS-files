@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Purple Background like the image */
+body {
+  background: linear-gradient(135deg, #d984c8, #f092e4);
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.presentation-container {
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Header Titles Styling */
+.header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.title-main {
+  background-color: #0d1b2a;
+  color: #48cae4;
+  font-size: 38px;
+  font-weight: 900;
+  padding: 10px 25px;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.title-sub {
+  background-color: #0077b6;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 8px 20px;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Layout for both cards + arrow */
+.showcase-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* White Frame Card Design */
+.grid-card {
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 4px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.desktop-card {
+  flex: 2;
+}
+
+.mobile-card {
+  flex: 1;
+  max-width: 280px;
+}
+
+/* Grid Boxes Common Properties */
+.grid-desktop, .grid-mobile {
+  display: grid;
+  gap: 8px;
+}
+
+.grid-desktop > *, .grid-mobile > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: #0f172a;
+}
+
+/* Green Color Palette */
+.navbar, .content1, .content3 {
+  background-color: #a8e6cf;
+}
+
+.sidebar, .footer {
+  background-color: #00ced1;
+}
+
+.main, .content2 {
+  background-color: #56e3d7;
+}
+
+/* 1. Left Grid Structure (Desktop) */
+.grid-desktop {
+  grid-template-columns: 140px 1fr 1fr 1fr;
+  grid-template-rows: 40px 180px 120px 45px;
+  grid-template-areas:
+    "navbar  navbar   navbar   navbar"
+    "sidebar main     main     main"
+    "sidebar content1 content2 content3"
+    "sidebar footer   footer   footer";
+}
+
+/* 2. Right Grid Structure (Mobile) */
+.grid-mobile {
+  grid-template-columns: 1fr;
+  grid-template-rows: 25px 25px 140px 45px 45px 45px 30px;
+  grid-template-areas:
+    "navbar"
+    "sidebar"
+    "main"
+    "content1"
+    "content2"
+    "content3"
+    "footer";
+}
+
+/* Grid Area Assignments */
+.navbar   { grid-area: navbar; }
+.sidebar  { grid-area: sidebar; }
+.main     { grid-area: main; }
+.content1 { grid-area: content1; }
+.content2 { grid-area: content2; }
+.content3 { grid-area: content3; }
+.footer   { grid-area: footer; }
+
+/* Arrow Styling */
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  color: #ffffff;
+  font-size: 60px;
+  font-weight: bold;
+  transform: rotate(-10deg);
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 850px) {
+  .showcase-area {
+    flex-direction: column;
+  }
+  .arrow {
+    transform: rotate(90deg);
+  }
+}

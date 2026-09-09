@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Collage Design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1a1a1a;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Outer Frame Canvas */
+        .canvas {
+            position: relative;
+            width: 600px;
+            height: 520px;
+            background-color: #c09d3b; /* Golden Mustard Background */
+            border: 1px solid #aa872d;
+            overflow: hidden;
+        }
+
+        /* Background space images visible between circular overlays */
+        .bg-space {
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Top gap image (Sunset Sky) */
+        .bg-top {
+            top: 0;
+            left: 200px;
+            width: 200px;
+            height: 200px;
+            background-image: url('https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?w=500&q=80');
+        }
+
+        /* Left gap image (Snow Field) */
+        .bg-left {
+            top: 160px;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-image: url('https://images.unsplash.com/photo-1517824806704-9040b037703b?w=500&q=80');
+        }
+
+        /* Right gap image (Forest/Greenery) */
+        .bg-right {
+            top: 160px;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=500&q=80');
+        }
+
+        /* Bottom gap image (Water/Sea) */
+        .bg-bottom {
+            bottom: 0;
+            left: 200px;
+            width: 200px;
+            height: 200px;
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&q=80');
+        }
+
+        /* Common Circle Styling */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #c09d3b; /* Matches outer background */
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+            z-index: 2;
+        }
+
+        .circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Circle Positioning */
+        
+        /* 1. Top Left - Wolf */
+        .circle.top-left {
+            top: 20px;
+            left: 25px;
+            width: 220px;
+            height: 220px;
+        }
+
+        /* 2. Top Right - Tiger */
+        .circle.top-right {
+            top: 20px;
+            right: 25px;
+            width: 220px;
+            height: 220px;
+        }
+
+        /* 3. Center - Lioness */
+        .circle.center {
+            top: 50%;
+            left: 50%;
+            width: 230px;
+            height: 230px;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+        }
+
+        /* 4. Bottom Left - Dog */
+        .circle.bottom-left {
+            bottom: 20px;
+            left: 25px;
+            width: 220px;
+            height: 220px;
+        }
+
+        /* 5. Bottom Right - Bear */
+        .circle.bottom-right {
+            bottom: 20px;
+            right: 25px;
+            width: 220px;
+            height: 220px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="canvas">
+        <!-- Nature background spaces in the gaps -->
+        <div class="bg-space bg-top"></div>
+        <div class="bg-space bg-left"></div>
+        <div class="bg-space bg-right"></div>
+        <div class="bg-space bg-bottom"></div>
+
+        <!-- 5 Circular Animal Images -->
+        <!-- Center: Lioness -->
+        <div class="circle center">
+            <img src="https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?w=600&q=80" alt="Lioness">
+        </div>
+
+        <!-- Top Left: Wolf -->
+        <div class="circle top-left">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.a-G_Bzlx1n0GMCvtTqRLSAHaF7?r=0&pid=Api&P=0&h=180" alt="Wolf">
+        </div>
+
+        <!-- Top Right: Tiger -->
+        <div class="circle top-right">
+            <img src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=600&q=80" alt="Tiger">
+        </div>
+
+        <!-- Bottom Left: Dog -->
+        <div class="circle bottom-left">
+            <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=600&q=80" alt="Dog">
+        </div>
+
+        <!-- Bottom Right: Bear -->
+        <div class="circle bottom-right">
+            <img src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?w=600&q=80" alt="Bear">
+        </div>
+    </div>
+
+</body>
+</html>
